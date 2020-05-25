@@ -4,10 +4,10 @@ const app = express();
 const routes = require("./routes");
 const port = 3000;
 
-app.use(express.static(__dirname + "/public"));
+app.use(express.static(__dirname + "../frontend/public"));
 app.use(express.json());
 
-app.use("/api", routes);
+app.use("/", routes);
 
 app.listen(port, () => {
   console.log(`Server is running: ${port}`);
